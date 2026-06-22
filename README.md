@@ -7,6 +7,21 @@ This project demonstrates an end-to-end Detection Engineering and Threat Hunting
 The objective was to simulate attacker activity, generate telemetry, validate detections, investigate events, reconstruct an attack timeline, and map activity to MITRE ATT&CK techniques.
 
 ---
+## Executive Summary
+
+This project simulates a complete attack lifecycle against an Ubuntu server and demonstrates how native Linux telemetry can be used to detect, investigate, and respond to malicious activity.
+
+The investigation covered:
+
+- Reconnaissance
+- Web Enumeration
+- SSH Brute Force
+- Valid Account Access
+- Discovery Activities
+- Persistence Simulation
+
+Evidence was collected using Apache logs, auth.log, auditd, and Fail2Ban.
+
 ## Lab Architecture
 
 ```text
