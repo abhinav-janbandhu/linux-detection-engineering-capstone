@@ -7,15 +7,18 @@ This project demonstrates an end-to-end Detection Engineering and Threat Hunting
 The objective was to simulate attacker activity, generate telemetry, validate detections, investigate events, reconstruct an attack timeline, and map activity to MITRE ATT&CK techniques.
 
 ---
+## Lab Architecture
+
+```text
 Kali Linux (10.10.10.20)
-        |
-        |
-        v
+          |
+          v
 Ubuntu Target Server
 ├── Apache
 ├── SSH
 ├── auditd
 └── Fail2Ban
+```
 
 ## Lab Environment
 
