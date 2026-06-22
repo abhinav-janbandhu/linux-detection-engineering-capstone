@@ -10,14 +10,21 @@ The objective was to simulate attacker activity, generate telemetry, validate de
 ## Lab Architecture
 
 ```text
-Kali Linux (10.10.10.20)
-          |
-          v
-Ubuntu Target Server
-├── Apache
-├── SSH
-├── auditd
-└── Fail2Ban
+Attacker
+┌─────────────────────┐
+│ Kali Linux          │
+│ 10.10.10.20         │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Ubuntu Target       │
+├─────────────────────┤
+│ Apache HTTP Server  │
+│ OpenSSH             │
+│ auditd              │
+│ Fail2Ban            │
+└─────────────────────┘
 ```
 
 ## Lab Environment
