@@ -1,1 +1,12 @@
-
+2026-06-22 08:03 - Nmap reconnaissance performed from 10.10.10.20
+2026-06-22 08:15 - Gobuster directory enumeration started
+2026-06-22 08:15 - Hidden directory /admin discovered
+2026-06-22 08:26 - SSH brute force attempt detected
+2026-06-22 08:26 - Fail2Ban blocked source IP 10.10.10.20
+2026-06-22 08:31 - Source IP unbanned by administrator
+2026-06-22 08:31 - Successful SSH login for user abhinav from 10.10.10.20
+2026-06-22 08:35 - Account discovery using cat /etc/passwd
+2026-06-22 08:35 - Directory discovery using ls -la /home
+2026-06-22 08:35 - User discovery using id command
+2026-06-22 08:41 - Persistence artifact created
+2026-06-22 08:41 - Persistence artifact discovered during threat hunting
