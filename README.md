@@ -218,3 +218,30 @@ Repository Files:
 - Multiple log sources are required for effective investigations.
 - Automated controls such as Fail2Ban can disrupt attacker activity.
 - Threat hunting benefits from timeline reconstruction and ATT&CK mapping.
+
+- ## Detection Gaps Identified
+
+During the investigation, several attacker discovery activities were not captured by the existing auditd rules.
+
+Activities not detected:
+
+- `cat /etc/passwd`
+- `ls -la /home`
+- `id`
+
+Reason:
+
+The configured auditd rules focused on:
+
+- Authentication monitoring
+- File modification monitoring
+- Privileged command execution
+
+These rules successfully detected brute-force activity and privileged operations, but did not provide visibility into standard user-level discovery commands.
+
+Potential Improvements:
+
+- Monitor additional discovery-related commands
+- Expand audit coverage for user activity
+- Create detections for account and directory enumeration behavior
+- Correlate discovery activity with successful logins
