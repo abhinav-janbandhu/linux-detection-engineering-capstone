@@ -1,1 +1,18 @@
+Indicators of Compromise (IOCs)
+
+Source IP:
+10.10.10.20
+
+User Agent:
+gobuster/3.8.2
+
+Discovered Resource:
+/admin
+
+Authentication Events:
+Failed password for invalid user fakeuser
+Accepted password for abhinav
+
+Suspicious Artifact:
+/home/abhinav/.hidden-backdoor/persistence.txt
 
