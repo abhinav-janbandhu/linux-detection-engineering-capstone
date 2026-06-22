@@ -1,1 +1,36 @@
+Investigation Findings
+
+Target Host:
+Ubuntu Lab Server
+
+Attacker Host:
+Kali Linux
+IP: 10.10.10.20
+
+Services Discovered:
+- SSH (22)
+- Apache HTTP (80)
+
+Attack Activity Observed:
+- Nmap service discovery
+- Gobuster directory enumeration
+- SSH brute force attempts
+- Successful SSH login
+- Account discovery
+- User discovery
+- Persistence artifact creation
+
+Defensive Controls:
+- auditd
+- Fail2Ban
+
+Detection Sources:
+- Apache access.log
+- auth.log
+- auditd
+
+Result:
+Fail2Ban successfully blocked attacker after 3 failed SSH attempts.
+Attacker later obtained valid credentials and logged in.
+Persistence artifact was identified through threat hunting.
 
