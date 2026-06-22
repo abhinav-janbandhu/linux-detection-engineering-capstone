@@ -219,7 +219,7 @@ Repository Files:
 - Automated controls such as Fail2Ban can disrupt attacker activity.
 - Threat hunting benefits from timeline reconstruction and ATT&CK mapping.
 
-- ## Detection Gaps Identified
+## Detection Gaps Identified
 
 During the investigation, several attacker discovery activities were not captured by the existing auditd rules.
 
