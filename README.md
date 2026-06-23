@@ -247,3 +247,50 @@ Potential Improvements:
 - Expand audit coverage for user activity
 - Create detections for account and directory enumeration behavior
 - Correlate discovery activity with successful logins
+
+
+  Detection Coverage Assessment
+
+The investigation was reviewed to determine which attacker techniques can currently be detected using the available telemetry sources within the lab environment.
+
+Current Monitoring Coverage
+
+| ATT&CK Technique                     | Detection Status | Evidence Source       |
+| ------------------------------------ | ---------------- | --------------------- |
+| T1110 - Brute Force                  | Detected         | auth.log, Fail2Ban    |
+| T1078 - Valid Accounts               | Detected         | auth.log              |
+| T1083 - File and Directory Discovery | Partial          | Apache Logs, auditd   |
+| T1087 - Account Discovery            | Partial          | auditd                |
+| T1033 - System Owner/User Discovery  | Partial          | auditd                |
+| T1547 - Persistence                  | Detected         | auditd                |
+| T1046 - Network Service Discovery    | Not Detected     | No Network Monitoring |
+
+Coverage Assessment Summary
+
+The current lab provides strong visibility into authentication activity, persistence mechanisms, and web-based reconnaissance activity. However, network-level visibility remains limited and several discovery-related commands were not captured by existing auditd rules.
+
+Priority Detection Gaps
+
+High Priority
+
+* Discovery command monitoring
+* Credential access monitoring
+* Additional persistence detection
+
+Medium Priority
+
+* Network reconnaissance detection
+* Lateral movement detection
+
+Future Monitoring Enhancements
+
+* Expand auditd coverage for discovery activities
+* Implement Sysmon for Linux
+* Deploy Suricata or Zeek for network visibility
+* Integrate centralized log analytics
+* Develop additional ATT&CK-based detection rules
+
+Conclusion
+
+This assessment demonstrates that effective Detection Engineering requires not only building detections but also continuously measuring monitoring coverage and identifying visibility gaps. The findings from this review will be used to guide future detection development and threat hunting activities within the lab environment.
+
