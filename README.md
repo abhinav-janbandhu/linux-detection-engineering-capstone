@@ -248,8 +248,9 @@ Potential Improvements:
 - Create detections for account and directory enumeration behavior
 - Correlate discovery activity with successful logins
 
+---
 
-  Detection Coverage Assessment
+##  Detection Coverage Assessment
 
 The investigation was reviewed to determine which attacker techniques can currently be detected using the available telemetry sources within the lab environment.
 
