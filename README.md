@@ -250,11 +250,11 @@ Potential Improvements:
 
 ---
 
-##  Detection Coverage Assessment
+## Detection Coverage Assessment
 
 The investigation was reviewed to determine which attacker techniques can currently be detected using the available telemetry sources within the lab environment.
 
-Current Monitoring Coverage
+### Current Monitoring Coverage
 
 | ATT&CK Technique                     | Detection Status | Evidence Source       |
 | ------------------------------------ | ---------------- | --------------------- |
@@ -266,24 +266,24 @@ Current Monitoring Coverage
 | T1547 - Persistence                  | Detected         | auditd                |
 | T1046 - Network Service Discovery    | Not Detected     | No Network Monitoring |
 
-Coverage Assessment Summary
+### Coverage Assessment Summary
 
 The current lab provides strong visibility into authentication activity, persistence mechanisms, and web-based reconnaissance activity. However, network-level visibility remains limited and several discovery-related commands were not captured by existing auditd rules.
 
-Priority Detection Gaps
+### Priority Detection Gaps
 
-High Priority
+#### High Priority
 
 * Discovery command monitoring
 * Credential access monitoring
 * Additional persistence detection
 
-Medium Priority
+#### Medium Priority
 
 * Network reconnaissance detection
 * Lateral movement detection
 
-Future Monitoring Enhancements
+### Future Monitoring Enhancements
 
 * Expand auditd coverage for discovery activities
 * Implement Sysmon for Linux
@@ -291,7 +291,6 @@ Future Monitoring Enhancements
 * Integrate centralized log analytics
 * Develop additional ATT&CK-based detection rules
 
-Conclusion
+### Conclusion
 
 This assessment demonstrates that effective Detection Engineering requires not only building detections but also continuously measuring monitoring coverage and identifying visibility gaps. The findings from this review will be used to guide future detection development and threat hunting activities within the lab environment.
-
